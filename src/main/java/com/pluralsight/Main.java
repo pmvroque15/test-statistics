@@ -1,17 +1,30 @@
 package com.pluralsight;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+        int[] testScores = {96, 93, 40, 100, 97, 92, 95, 98, 94, 90};
+        int sum = 0;
+        int maxScore = testScores[0];
+        int minScore = testScores[0];
+        //Looping through array to get the sum
+        for (int score : testScores) {
+            sum = sum + score;
         }
+
+        //Looping through array to get the max number
+        for (int highestScore : testScores) {
+            maxScore = Math.max(maxScore, highestScore);
+        }
+        for (int lowestScore : testScores) {
+            minScore = Math.min(minScore, lowestScore);
+        }
+
+        //Looping through array to get the min number
+
+        //Display output
+        System.out.printf("Average: %s\n", (sum / testScores.length));
+        System.out.printf("Highest number: %s\n", maxScore);
+        System.out.printf("Lowest number: %S\n", minScore);
+
     }
 }
